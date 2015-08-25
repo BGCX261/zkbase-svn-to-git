@@ -1,0 +1,19 @@
+<?variable-resolver class="org.zkoss.zkplus.spring.DelegatingVariableResolver"?>
+<window id="userDetailsWin" title="User Details" apply="org.zkbase.webapp.composer.UserComposer">
+	<groupbox width="240px" closable="true">
+		<caption label="User Details" />
+		<vbox>
+			user name:
+			<textbox id="username" constraint="no empty"/>
+			first name:
+			<textbox id="firstName" />
+			last name:
+			<textbox id="lastName" />
+			password:
+			<textbox id="password" />
+			email:
+			<textbox id="email" constraint="/.+@.+\.[a-z]+/: e-mail address only"/>
+		</vbox>
+		<button id="save" label="Save" width="36px" height="24px" />
+	</groupbox>
+</window>

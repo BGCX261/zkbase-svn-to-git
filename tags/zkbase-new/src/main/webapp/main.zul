@@ -1,0 +1,23 @@
+<window id="main" use="org.zkbase.webapp.component.MainWindow">
+	<menubar>
+		<menuitem label="Init" onClick='main.includeContent("init.zul")'/>
+		<menuitem label="Login" onClick='main.includeContent("login.zul")'/>
+		<menu label="User">
+			<menupopup>
+				<menuitem label="List" onClick='main.includeContent("portal/user/user_list.zul")'/>
+				<menuseparator />
+				<menuitem label="Add" onClick='main.includeContent("portal/user/user_details.zul")' />							
+			</menupopup>
+		</menu>
+		<menu label="Admin">
+			<menupopup>
+				<menuitem label="List" onClick='main.includeContent("admin/index.zul")'/>
+				<menuseparator />
+				<menuitem label="Add" onClick='main.includeContent("admin/index.zul")'/>
+			</menupopup>
+		</menu>
+		<menuitem label="About" onClick="main.about()" />
+		<menuitem label="Test User List" onClick='Executions.sendRedirect("test/glc_test.zul")'/>
+	</menubar>
+	<include id="content" />
+</window>
